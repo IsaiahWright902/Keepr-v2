@@ -22,7 +22,7 @@ namespace Keepr.Controllers
         }
 
         [HttpGet]
-        [Authorize]
+        
         public ActionResult<IEnumerable<VaultKeep>> Get()
         {
             try
@@ -37,7 +37,7 @@ namespace Keepr.Controllers
         }
 
         [HttpGet("{id}")]
-        [Authorize]
+    
         public ActionResult<Vault> GetAction(int id)
         {
             try
@@ -51,7 +51,7 @@ namespace Keepr.Controllers
         }
 
         [HttpPost]
-        [Authorize]
+    
         public ActionResult<VaultKeep> Post([FromBody] VaultKeep newVaultKeep)
         {
             try
@@ -67,7 +67,7 @@ namespace Keepr.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize]
+    
         public ActionResult<VaultKeep> Delete(int id)
         {
             try

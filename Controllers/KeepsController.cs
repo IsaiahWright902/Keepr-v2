@@ -34,7 +34,7 @@ namespace Keepr.Controllers
         }
 
         [HttpGet("{id}")]
-        [Authorize]
+        
         public ActionResult<Keep> Get(int id)
         {
             try
@@ -48,7 +48,7 @@ namespace Keepr.Controllers
         }
 
         [HttpPost]
-        [Authorize]
+        
         public ActionResult<Keep> Post([FromBody] Keep newKeep)
         {
             try
@@ -64,7 +64,7 @@ namespace Keepr.Controllers
         }
 
         [HttpPut("{id}")]
-        [Authorize]
+        
         public ActionResult<Keep> Edit(int id, [FromBody] Keep updatedKeep)
         {
             try
@@ -81,7 +81,7 @@ namespace Keepr.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize]
+        
         public ActionResult<Keep> Delete(int id)
         {
             try

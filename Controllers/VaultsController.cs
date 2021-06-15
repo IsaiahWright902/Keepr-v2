@@ -23,7 +23,7 @@ namespace Keepr.Controllers
             _ks = ks;
         }
         [HttpGet]
-        [Authorize]
+    
         public ActionResult<IEnumerable<Vault>> Get()
         {
             try
@@ -38,7 +38,7 @@ namespace Keepr.Controllers
         }
 
         [HttpGet("{id}")]
-        [Authorize]
+    
         public ActionResult<Vault> Get(int id)
         {
             try
@@ -52,7 +52,7 @@ namespace Keepr.Controllers
         }
         // Get Keeps by Vault Id
         [HttpGet("{id}/keeps")]
-        [Authorize]
+        
         public ActionResult<IEnumerable<Keep>> GetKeepsByVaultId(int id)
         {
             try
@@ -66,7 +66,7 @@ namespace Keepr.Controllers
         }
 
         [HttpPost]
-        [Authorize]
+    
         public ActionResult<Vault> Post([FromBody] Vault newVault)
         {
             try
@@ -84,7 +84,7 @@ namespace Keepr.Controllers
 
 
         [HttpDelete("{id}")]
-        [Authorize]
+    
         public ActionResult<Vault> Delete(int id)
         {
             try
